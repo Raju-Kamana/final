@@ -1,0 +1,37 @@
+GET http://localhost:8081/books
+
+###
+
+POST http://localhost:8081/authenticate
+content-type: application/json
+
+{
+    "username": "reader",
+    "password": "reader@123"
+}
+### eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyZWFkZXIiLCJiZXN0IGF1dGhvciI6IkRldmtpIE5hbmRhbiBLaGF0cmkiLCJteXJvbGUiOiJ0cmFpbmVyIiwiZXhwIjoxNjYwNzUxOTkwLCJpYXQiOjE2NjA3MzM5OTB9.ljC7EMuQV0s-40yIzt2C6u8T0v5gnC4eLT1QUY_cuHXTNcadQp50ntl-qxN7AnIofU62JpobSQOeWTNyexP0Vw
+
+
+###
+
+POST http://localhost:8081/authenticate
+content-type: application/json
+
+{
+    "username": "director",
+    "password": "director@123"
+}
+### eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkaXJlY3RvciIsImJlc3QgYXV0aG9yIjoiRGV2a2kgTmFuZGFuIEtoYXRyaSIsIm15cm9sZSI6InRyYWluZXIiLCJleHAiOjE2NjA3NTUxMDIsImlhdCI6MTY2MDczNzEwMn0.vpvlLcPRErPhmWKQCm9jNn35P7I2-P86KG7kdLOMz2_ZEk5GQDzUqrtamqkTSZJG_dz1avEonJg5na1r3FJWew
+
+
+###
+POST http://localhost:8080/movies
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyZWFkZXIiLCJiZXN0IGF1dGhvciI6IkRldmtpIE5hbmRhbiBLaGF0cmkiLCJteXJvbGUiOiJ0cmFpbmVyIiwiZXhwIjoxNjYwNzUxOTkwLCJpYXQiOjE2NjA3MzM5OTB9.ljC7EMuQV0s-40yIzt2C6u8T0v5gnC4eLT1QUY_cuHXTNcadQp50ntl-qxN7AnIofU62JpobSQOeWTNyexP0Vw
+content-type: text/plain
+
+Hanuman
+
+###
+
+GET http://localhost:8080/movies/director
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkaXJlY3RvciIsImJlc3QgYXV0aG9yIjoiRGV2a2kgTmFuZGFuIEtoYXRyaSIsIm15cm9sZSI6InRyYWluZXIiLCJleHAiOjE2NjA3NTUxMDIsImlhdCI6MTY2MDczNzEwMn0.vpvlLcPRErPhmWKQCm9jNn35P7I2-P86KG7kdLOMz2_ZEk5GQDzUqrtamqkTSZJG_dz1avEonJg5na1r3FJWew
